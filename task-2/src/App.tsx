@@ -2,13 +2,15 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Button from "./components/Button";
 import "./App.css";
 import { FaArrowPointer } from "react-icons/fa6";
+import TextField from "./components/TextField";
 import { useState } from "react";
 function App() {
-  const[message,setMessage]=useState("")
+  const[message,setMessage]=useState("");
+ const[name,setName]=useState("");
   return (
     <div className="app">
       <Sidebar />
-
+  
       <main className="main_content">
         <div className="button_card">
           <div className="button_heading">
@@ -30,6 +32,7 @@ function App() {
           </div>
 {message && <p className="success_message">{message}</p>}
         </div>
+        <TextField label="Full Name" placeholder="Enter your name..." value={name} onChange={setName}  helperText={`Your name:${name}`} />
       </main>
     </div>
   );

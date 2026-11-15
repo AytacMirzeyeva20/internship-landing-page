@@ -66,7 +66,7 @@ body{
 .button_card{
  background-color: #151c2b;
   border: 1px solid #293348;
-  padding: 25px 15px;
+  padding: 30px 15px;
   border-radius: 12px;
   width: 50%;
   box-sizing: border-box;
@@ -149,4 +149,76 @@ body{
   color: #16ca19;
   font-size: 14px;
   margin-top: 15px;
+}
+
+.textfield_heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.textfield_heading .icon {
+  color: #d6ad60;
+  font-size: 20px;
+}
+
+.textfield_heading h2 {
+  color: white;
+  font-size: 18px;
+  margin: 0;
+}
+
+.textfield_heading p {
+  width: 100%;
+  color: #929bad;
+  font-size: 13px;
+  margin: 5px 0 0;
+}
+
+.textfield_content {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.textfield_content label {
+  color: #e5e7eb;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.textfield_content input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  background-color: #0e1523;
+  border: 1px solid #39465d;
+  border-radius: 7px;
+  color: white;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.textfield_content input:focus {
+  border-color: #d6ad60;
+  box-shadow: 0 0 0 2px rgba(214, 173, 96, 0.15);
+}
+
+.textfield_content input::placeholder {
+  color: #737f92;
+}
+
+.helper_text {
+  color: #929bad;
+  font-size: 12px;
+  margin: 0;
+}
+
+.error_text {
+  color: #f87171;
+  font-size: 12px;
+  margin: 0;
 }
