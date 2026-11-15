@@ -62,3 +62,91 @@ body{
   background-color: #26344b;
   color: #d6ad60;
 }
+
+.button_card{
+ background-color: #151c2b;
+  border: 1px solid #293348;
+  padding: 25px 15px;
+  border-radius: 12px;
+  width: 50%;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+.button_heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.icon {
+  color: #d6ad60;
+  font-size: 20px;
+}
+
+.button_heading h2 {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+}
+
+.button_heading p {
+  color: #929bad;
+  font-size: 13px;
+  width: 100%;
+  margin: 5px 0 0;
+}
+.button_examples {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.button_examples button {
+  padding: 9px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary {
+  border: 1px solid #d6ad60;
+  background-color: #d6ad60;
+  color: #101827;
+}
+
+.primary:hover {
+  background-color: #e7c47d;
+}
+
+.secondary {
+  border: 1px solid #d6ad60;
+  background: transparent;
+  color: #d6ad60;
+}
+
+.secondary:hover {
+  background-color: #293348;
+}
+
+.loading {
+  border: 1px solid #46536a;
+  background-color: #293348;
+  color: white;
+}
+
+ .button_examples button:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+} 
+
+.success_message {
+  color: #16ca19;
+  font-size: 14px;
+  margin-top: 15px;
+}
