@@ -1,32 +1,85 @@
-# React + TypeScript + Vite
+Talora UI
+A reusable UI component library built with React, TypeScript, and CSS.
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Overview
+Talora UI  is a small reusable component system designed to create consistent and user-friendly interfaces. It includes reusable components with customizable styles and different states.
 
-Currently, two official plugins are available:
+Features
+Button: Primary and Secondary variants, Loading and Disabled states.
+TextField: Label, placeholder, helper text, and error message.
+StatusBadge: Active, Pending, and Error status indicators.
+EmptyState: Displays a friendly message when no data is available.
+Design Tokens: Centralized colors, spacing, font sizes, and border radius.
+Responsive Design: Layout adapts to different screen sizes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Technologies Used
+React
+TypeScript
+Vite
+CSS
+React Icons
 
-## React Compiler
+Project Structure
+src/
+├── components/
+│   ├── Sidebar/
+│   ├── Button/
+│   ├── TextField/
+│   ├── StatusBadge/
+│   └── EmptyState/
+├── styles/
+│   └── tokens.css
+├── App.tsx
+├── App.css
+├── index.css
+└── main.tsx
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Installation
+npm create vite@latest ./
+React+TypeScript
+Start the development server: npm run dev
 
-## Expanding the Oxlint configuration
+Design System
+The project uses centralized CSS variables in tokens.css to maintain consistent colors, spacing, typography, and border radius across components.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Testing
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+The project uses **Vitest** and **React Testing Library** for component testing.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Running Tests
+
+Run the following command to start the test runner:
+
+npm run build
+
+
+To run tests once without watch mode:
+
+npm run build
+npm run lint
+
+ Test Coverage
+
+The project includes tests for all four reusable UI components:
+
+- **Button**
+  - Renders correctly.
+  - Calls the onClick handler when clicked.
+  - Does not trigger onClick when disabled.
+  - Displays loading state and prevents interaction while loading.
+
+- **TextField**
+  - Renders the label correctly.
+  - Associates the label with the input.
+  - Connects helper and error messages using accessible attributes.
+
+- **StatusBadge**
+  - Displays the correct status text.
+
+- **EmptyState**
+  - Displays the title and description correctly.
+
+ Test Results
+
+All component tests are executed using Vitest in a jsdom environment.
+
