@@ -1,6 +1,7 @@
-
 body {
+  margin: 0;
   background-color: var(--color-background);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .sidebar {
@@ -41,9 +42,14 @@ body {
 }
 
 .components {
-  display: flex;
+ display: flex;
   align-items: center;
   gap: var(--spacing-sm);
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-family: inherit;
   color: #d1d5db;
   padding: 12px;
   border-radius: var(--radius-md);
@@ -65,7 +71,10 @@ body {
   color: var(--color-primary);
 }
 
-
+.components:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
 
 .button_card {
   background-color: var(--color-card);
@@ -116,7 +125,7 @@ body {
   gap: var(--spacing-sm);
 }
 
-.button_examples button {
+.button {
   padding: 9px 16px;
   border-radius: var(--radius-sm);
   font-size: 13px;
@@ -151,11 +160,14 @@ body {
   color: var(--color-text);
 }
 
-.button_examples button:disabled {
+.button:disabled {
   opacity: 0.8;
   cursor: not-allowed;
 }
-
+.button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
 .success_message {
   color: var(--color-success);
   font-size: var(--font-md);

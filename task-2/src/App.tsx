@@ -8,6 +8,7 @@ import { useState } from "react";
 import { IoTicket } from "react-icons/io5";
 import { FaBoxOpen } from "react-icons/fa6";
 import EmptyState from "./components/EmptyState";
+import StatusBadge from "./components/StatusBadge";
 function App() {
   const[message,setMessage]=useState("");
  const[name,setName]=useState("");
@@ -36,7 +37,11 @@ function App() {
           </div>
 {message && <p className="success_message">{message}</p>}
         </div>
-        <TextField label="Full Name" placeholder="Enter your name..." value={name} onChange={setName}  helperText={`Your name:${name}`} />
+       <div className="textfield_examples">
+<TextField label="Full Name"  placeholder="Enter your name..."  value={name} onChange={setName} helperText="Enter your full name"/>
+<TextField label="Email" placeholder="Enter your email..."  value="" onChange={() => {}} error="Email is required" />
+<TextField label="Username" value="Aytac" onChange={() => {}} disabled />
+       </div>
             <div className="button_card">
                   <div className="button_heading">
                     <IoTicket className="icon" />
@@ -44,10 +49,10 @@ function App() {
                     <p>Show status with style</p>
                   </div>
 <div className="badge_examples">
-    <span className="badge_active">Active</span>
-    <span className="badge_pending">Pending</span>
-    <span className="badge_error">Error</span>
-  </div>
+  <StatusBadge status="active" />
+  <StatusBadge status="pending" />
+  <StatusBadge status="error" />
+</div>
                   </div>
                    <div className="button_card">
                   <div className="button_heading">
@@ -57,7 +62,10 @@ function App() {
                   </div>
                   <div className="empty_content">
            <FaBoxOpen className="empty_icon" />
-         <EmptyState title="No Data Found" description="There is no data to display right now."/>
+      <div className="empty_examples">
+        <EmptyState title="No Data Found" description="There is no data to display right now." icon={<FaBoxOpen />} />
+        <EmptyState title="No Products"  description="Add a product to see it here."  icon={<FaBoxArchive />}/>
+      </div>
               </div>
                   </div>
                   
