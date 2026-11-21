@@ -1,0 +1,30 @@
+
+{
+  "applications": [
+    {
+      "id": "APP-001",
+      "status": "pending",
+      "date": "2026-11-18"
+    },
+    {
+      "id": "APP-002",
+      "status": "approved",
+      "date": "2026-11-17"
+    },
+    {
+      "id": "APP-003",
+      "status": "rejected",
+      "date": "2026-11-16"
+    },
+    {
+      "id": "APP-004",
+      "status": "pending",
+      "date": "2026-11-15"
+    },
+    {
+      "id": "APP-005",
+      "status": "approved",
+      "date": "2026-11-14"
+    }
+  ]
+}
