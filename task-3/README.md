@@ -1,32 +1,45 @@
-# React + TypeScript + Vite
+Task 3- Application Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React and TypeScript dashboard for coordinators to monitor
+internship applications using a mock API.
 
-Currently, two official plugins are available:
+Features
+- Display total applications count
+- Show pending, approved, and rejected applications
+- Display latest applications in a table
+- Handle loading and empty states
+- Handle API errors (401 and 500)
+- Refresh application data
+- Prevent duplicate API requests
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Technologies Used
+- React
+- TypeScript
+- Vite
+- CSS
+- Vitest
+- React Testing Library
+- JavaScript
+- Mock API
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the Oxlint configuration
+Installation
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Start - npm create vite@latest ./
+Start the development server: npm run dev
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+Testing
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+The project uses Vitest and React Testing Library.
+npm run test:run
+npm run build
+npm run lint
+
+Test coverage
+-Successful API response
+-Empty applications list
+-401 Unauthorized error
+-500 Internal Server Error
+-Refresh button functionality
+-Loading state
